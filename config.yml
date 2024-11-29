@@ -1,0 +1,36 @@
+# Model parameters
+hidden_size: 512
+n_input_channels: 4
+
+# Training parameters
+buffer_size: 100000
+batch_size: 32
+target_update: 10000
+train_episodes: 10000
+eval_episodes: 10
+learning_rate: 0.0001
+gamma: 0.90
+frame_stack: 4
+starting_mem_len: 50000
+
+# Exploration parameters
+epsilon_start: 1.0
+epsilon_final: 0.05
+epsilon_decay: 0.00001
+
+# DQN variants
+double_dqn: true
+dueling_dqn: true
+
+# Training features
+use_wandb: true
+render_training: false
+render_evaluation: false
+
+# Paths
+checkpoint_dir: "checkpoints"
+load_checkpoint: null
+
+# WandB specific settings
+wandb_project: "pong-dqn"
+wandb_entity: null
